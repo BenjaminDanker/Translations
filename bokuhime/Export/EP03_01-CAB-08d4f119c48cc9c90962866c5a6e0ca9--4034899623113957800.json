@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP03_01",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/EP03/EP03_01.lua",
+  "Text": "function EP03_01()\r\n    -- トレーニングパラメーター保存\r\n    -- ヴィジュアル\r\n    SaveData.EP03_TrainingParam.Visual = SaveData.TrainingParam.Visual\r\n    -- 教養\r\n    SaveData.EP03_TrainingParam.Intelligence = SaveData.TrainingParam.Intelligence\r\n    -- 精神\r\n    SaveData.EP03_TrainingParam.Mental = SaveData.TrainingParam.Mental\r\n\r\n    -- 精神レベルLv3 で分岐\r\n    if SaveData.TrainingParam.Mental < 3 then\r\n        ScenarioManager.Next(\"EP03_01_01\")\r\n    else\r\n        ScenarioManager.Next(\"EP03_01_02\")\r\n    end\r\nend\r\n"
+}

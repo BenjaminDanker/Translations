@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP03_28",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/EP03/EP03_28.lua",
+  "Text": "function EP03_28()\r\n\r\n    --//一周目はアキラ固定。\r\n    --//二週目以降は能力値次第で、以下の通り選択肢が発生します。\r\n\r\n    -- ・アキラ　※必ず発生\r\n    -- ・リラ　　※【ビジュアル】ＬＶ．４の場合発生\r\n    -- ・ウラン　※【教養】ＬＶ．４の場合発生\r\n    -- ・エルメス※全能力がＬＶ．４の場合発生\r\n\r\n\r\n    --//アキラを選択した場合、結-3A\r\n\r\n    --//リラを選択した場合、結-3B\r\n\r\n    --//ウランを選択した場合、結-3C\r\n\r\n    --//エルメスを選択した場合、結-3D\r\n\r\n    -- //選択肢\r\n    local selectParam = {\"アキラ\"}\r\n\r\n    -- 条件分岐\r\n    if SystemSaveData.IsClear == true then\r\n        if SaveData.TrainingParam.Visual >= 4 then\r\n            table.insert( selectParam , \"リラ\")\r\n        end\r\n        if SaveData.TrainingParam.Intelligence >= 4 then\r\n            table.insert( selectParam , \"ウラン\")\r\n        end\r\n        if SaveData.TrainingParam.Visual >= 4 and SaveData.TrainingParam.Mental >= 4 and SaveData.TrainingParam.Intelligence >= 4 then\r\n            table.insert( selectParam , \"エルメス\")\r\n        end\r\n    end\r\n    SELECT(selectParam)\r\n\r\n    while IsSelect() == true do Wait(0) end\r\n\r\nSTOP_BGM(1000)\r\n    LAYER_LOAD(LAYER_BG, \"BG000aa\")\r\n    SWITCH_SCREEN(\"mask000\" , 1000,false)\r\n    WAIT_INPUT(1000)\r\n\r\n    local result = SelectResult()\r\n    -- 選択肢分岐\r\n    if result == \"アキラ\" then\r\n        SaveData.Ep0328Select = \"アキラ\";\r\n        ScenarioManager.Next(\"EP03_28_01\")\r\n    elseif result == \"リラ\" then\r\n        SaveData.Ep0328Select = \"リラ\";\r\n        ScenarioManager.Next(\"EP03_28_02\")\r\n    elseif result == \"ウラン\" then\r\n        SaveData.Ep0328Select = \"ウラン\";\r\n        ScenarioManager.Next(\"EP03_28_03\")\r\n    elseif result == \"エルメス\" then\r\n        SaveData.Ep0328Select = \"エルメス\";\r\n        ScenarioManager.Next(\"EP03_28_04\")\r\n    end\r\nend\r\n"
+}

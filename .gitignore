@@ -1,0 +1,20 @@
+# ── Python ─────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+
+# Environment variables
+*.env
+
+# ── IDEs & Editors ────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+
+# ── OS Files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP_OGA_04",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/Other/EP_OGA_04.lua",
+  "Text": "function EP_OGA_04()\r\n  -- .[オウガルート]結『伊草ミナトと六条オウガ』\r\n  SaveData.Title = \"伊草ミナトと六条オウガ\"\r\n\r\n  -- //BG：黒バック\r\n  LAYER_LOAD(LAYER_BG, \"BG000aa\")\r\n  SWITCH_SCREEN(\"mask000\" , 1000,false)\r\n\r\n  -- //CI：オウガEND\r\nLAYER_LOAD(50,\"CI058a\")\r\nSWITCH_SCREEN(\"mask000\",1000,false)\r\n\r\nPLAY_BGM(\"BGM07.wav\",0,true)\r\n\r\n  MSG([[ After that, I told Ouga everything, and with Ouga's help—and by extension, the Rokujou family's cooperation—I began anew to investigate the truth about Marika-neesan. ]])\r\n\r\n  MSG([[ I was going to leave Yuriai Private Academy, but I haven't given up yet. ]])\r\n\r\n  MSG([[ I'll struggle to the very end to save Marika-neesan. ]])\r\n\r\n  MSG([[ Because right now, I have a best friend by my side whom I can tell anything to. ]])\r\n\r\n  MSG([[ There's only one secret I can't tell even Ouga. ]])\r\n\r\nPLAY_VOICE(\"ouga_plus0015.wav\")\r\n  MSG([[\r\n  【Ouga】\r\n \"By the way, Minato, how is Lady Erika doing? It would be good to meet up sometime and exchange updates on each other's lives.\" ]])\r\n\r\nPLAY_VOICE(\"minato_plus0039.wav\")\r\n  MSG([[\r\n  【Minato】\r\n \"E-Erika? Y-Yeah... she’s doing fine! If I get a chance for you to meet her, I’ll let you know!\" ]])\r\n\r\n  MSG([[ That is, the truth that Erika Ikusa is actually me. ]])\r\n\r\n  MSG([[ If he found out that the person he called the \"true Yamato Nadeshiko\" was actually his best friend, what kind of face would he make? ]])\r\n\r\nPLAY_VOICE(\"minato_plus0040.wav\")\r\n  MSG([[\r\n  【Minato】\r\n (Even if I leave Yuriai Private Academy... it seems I can't escape from \"Erika Ikusa.\") ]])\r\n\r\n  MSG([[ Mocking my own ironic fate— ]])\r\n\r\n  MSG([[ Today as well, I am smiling without change beside Ouga. ]])\r\n\r\n  -- //Fin\r\n\r\n  -- 25\tオウガＥＮＤ\t『オウガ』ルートをクリアした\r\n  UNLOCK_TROPHY(25)\r\n\r\nSTOP_BGM(2000)\r\n  LAYER_LOAD(50,\"\")\r\n  LAYER_LOAD(LAYER_BG, \"\")\r\n  SWITCH_SCREEN(\"mask000\" , 2000,false)\r\nWAIT_INPUT(1000)\r\n\r\n  NazenanoBokuhime(SaveData.BadNextScenario , SaveData.OgaNextScenario)\r\n  SaveData.OgaNextScenario = \"\"\r\nend"
+}

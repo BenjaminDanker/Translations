@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP_OGA_01_01",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/Other/EP_OGA_01_01.lua",
+  "Text": "function EP_OGA_01_01()\r\n  -- .[オウガルート]起α『誤った努力の果てに』\r\n  SaveData.Title = \"誤った努力の果てに\"\r\n\r\n  SAVE()\r\n\r\n  -- //以下の条件の場合、分岐\r\n\r\n  -- //２章[転-7]終了時点で、ステータス[ビジュアル]が２レベル以下の場合\r\n  -- //３章[転-7]終了時点で、ステータス[教養]が１レベル以下or[精神]が０レベルの場合\r\n\r\nLAYER_CLEAR_ALL()\r\n\r\n  -- //BG：大講堂正面\r\n  LAYER_LOAD(LAYER_BG, \"BG020aa\")\r\n  SWITCH_SCREEN(\"mask000\" , 1000,false)\r\n\r\n  MSG([[\r\n  　そして迎えた姫選挙当日。\r\n  ]])\r\n\r\n  -- //effect：セピア加工\r\nFILTER_SCREEN(2)\r\nSWITCH_SCREEN(\"mask008\" , 1000)\r\n\r\nPLAY_BGM(\"BGM09.wav\",0,true)\r\n\r\n  MSG([[\r\n  　ボクは記憶にも残らないくらいあっさりと、姫選挙で大敗を喫した。\r\n  ]])\r\n\r\n  MSG([[\r\n  　負けた理由は痛いほど自覚している。\r\n  ]])\r\n\r\n  MSG([[\r\n  　努力のベクトルが、誤っていたんだ。\r\n  ]])\r\n\r\n  MSG([[\r\n  　姫選挙までの期間は限られていた。\r\n  　もっとアキラの言うことに従って、状況をしっかりと整理して、時間を有効的に使うべきだった。\r\n  ]])\r\n\r\n  MSG([[\r\n  　今さら後悔をしたって手遅れだけれど……\r\n  　もし時間を巻き戻せるなら、アキラとの稽古のひとつひとつを、もっと大切にしていきたい。\r\n  ]])\r\n\r\n  MSG([[\r\n  　いつだって、ボクは気付くのが遅いんだ。\r\n  　マリカ姉さんを守れなかったあの時から、何ひとつ成長できていないじゃないか。\r\n  ]])\r\n\r\n  MSG([[\r\n  　自分が情けなさ過ぎて不思議と涙も出てこなかった。\r\n  ]])\r\n\r\n  -- //.[オウガルート]承へ\r\n\r\n  -- 　　　　◆\r\nFILTER_SCREEN(0)\r\n  LAYER_LOAD(LAYER_BG, \"\")\r\n  SWITCH_SCREEN(\"mask000\" , 1000,false)\r\nWAIT_INPUT(1000)\r\n\r\n  ScenarioManager.Next(\"EP_OGA_02\")\r\n\r\nend"
+}

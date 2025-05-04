@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP01_17",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/EP01/EP01_17.lua",
+  "Text": "function EP01_17()\r\n    -- --   //.次回予告\r\n    -- -- //※余裕があれば。優先度極低。\r\n    -- CgAllClear()\r\n    -- Bg(\"黒\")\r\n    -- SwitchScreen(\"R000\", 0.5)\r\n\r\n    -- Character(\"Center\", \"アキラ\", \"ba\")\r\n    -- SwitchScreen(\"R000\", 0.5)\r\n\r\n    -- Msg(\"アキラ\", \"「次回予告ー」\")\r\n\r\n    -- Msg(\"アキラ\",\r\n    --     \"「もう女装をせずに済むと思っていたミナトに衝撃の急展開。\\nなんと、朝目覚めると身体が女の子になっていた」\")\r\n\r\n    -- MsgFace(\"ミナト\", \"ga\")\r\n    -- Msg(\"ミナト\", \"「どういうこと！？」\")\r\n    -- Msg(\"アキラ\",\r\n    --     \"「身体の違いに困惑するミナト改めてミナ。\\n自分の身体なのに直視できず、トイレにもろくに入れない」\")\r\n\r\n    -- MsgFace(\"ミナト\", \"fa\")\r\n    -- Msg(\"ミナト\",\r\n    --     \"「女装だけでも大変なのに……女の子の身体になったらたしかに大変そうだね」\")\r\n    -- Character(\"Center\", \"アキラ\", \"ka\")\r\n    -- Msg(\"アキラ\", \"「そして当然、自分の胸を揉む」\")\r\n\r\n    -- MsgFace(\"ミナト\", \"ga\")\r\n    -- Msg(\"ミナト\", \"「揉まないよ！？」\")\r\n    -- Character(\"Center\", \"アキラ\", \"ha\")\r\n    -- Msg(\"アキラ\",\r\n    --     \"「正体がバレないよう男装して通学したミナは、これまで普通だった親友のオウガとの距離感にもハラハラ・ドキドキ」\")\r\n\r\n    -- Character(\"Center\", \"アキラ\", \"ha\")\r\n    -- Msg(\"アキラ\",\r\n    --     \"「しかしトラブルに次ぐトラブルで、遂に正体がバレてしまう」\")\r\n\r\n    -- CharacterOff()\r\n    -- SwitchScreen(\"R000\", 0.5)\r\n\r\n    -- Character(\"Center\", \"オウガ\", \"aa\")\r\n    -- SwitchScreen(\"R000\", 0.5)\r\n\r\n    -- Msg(\"オウガ\",\r\n    --     \"「ミナト。お前が女になったならオレ様は――」\")\r\n\r\n    -- MsgFace(\"ミナト\", \"ha\")\r\n    -- Msg(\"ミナ\", \"「お、オウガくん…」\")\r\n\r\n    -- CharacterOff()\r\n    -- SwitchScreen(\"R000\", 0.5)\r\n\r\n    -- Character(\"Center\", \"アキラ\", \"ha\")\r\n    -- Wait(0.5)\r\n\r\n    -- Character(\"Center\", \"アキラ\", \"ha\")\r\n    -- Msg(\"アキラ\",\r\n    --     \"「そして禁断の恋愛が幕をあけるのであった」\")\r\n\r\n    -- MsgFace(\"ミナト\", \"da\")\r\n    -- Msg(\"ミナト\", \"「勝手にあけないで…」\")\r\n    -- Character(\"Center\", \"アキラ\", \"ba\")\r\n    -- Msg(\"アキラ\",\r\n    --     \"「果たして、情欲の野獣だらけの学園で、ミナトは貞操を守ることができるのか。」\")\r\n\r\n    -- Msg(\"アキラ\",\r\n    --     \"「次回、ボク姫様と転性学園。\\n第2章『ミナト、揉まれる』TSスタンバイ」\")\r\n\r\n    -- MsgFace(\"ミナト\", \"ga\")\r\n    -- Msg(\"ミナト\", \"「揉まれないよ！？」\")\r\n    -- Character(\"Center\", \"アキラ\", \"eb\")\r\n    -- Msg(\"アキラ\",\r\n    --     \"「まぁミナトの親友が出てくるというのは本当なんですけどね。\\nではでは、引き続きお楽しみください」\")\r\n\r\n    -- CharacterOff()\r\n    -- Bg(\"黒\")\r\n    -- SwitchScreen(\"R000\", 1)\r\n\r\n    ScenarioManager.Next(\"EP02_01\")\r\n\r\nend\r\n"
+}

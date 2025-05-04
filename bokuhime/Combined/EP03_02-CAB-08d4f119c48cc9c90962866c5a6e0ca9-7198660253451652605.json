@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP03_02",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/EP03/EP03_02.lua",
+  "Text": "function EP03_02()\r\n    -- 精神レベルLv3 で分岐\r\n    if SaveData.TrainingParam.Mental < 3 then\r\n        ScenarioManager.Next(\"EP03_02_01\")\r\n    else\r\n        ScenarioManager.Next(\"EP03_02_02\")\r\n    end\r\nend\r\n"
+}

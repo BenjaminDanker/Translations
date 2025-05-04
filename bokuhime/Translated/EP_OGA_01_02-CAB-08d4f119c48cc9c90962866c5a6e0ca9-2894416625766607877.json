@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP_OGA_01_02",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/Other/EP_OGA_01_02.lua",
+  "Text": "function EP_OGA_01_02()\r\n  -- .[オウガルート]起β『心の弱さの果てに』\r\n  SaveData.Title = \"心の弱さの果てに\"\r\n\r\n  -- //各２～４章の姫選挙パートで敗れた場合、分岐\r\n\r\nLAYER_CLEAR_ALL()\r\n\r\n  -- //effect：セピア加工\r\n  -- //BG：大講堂正面\r\n  LAYER_LOAD(LAYER_BG, \"BG020aa\")\r\nFILTER_SCREEN(2)\r\nSWITCH_SCREEN(\"mask008\" , 1000,false)\r\n\r\nPLAY_BGM(\"BGM09.wav\",0,true)\r\n\r\n  MSG([[ ――I don't really remember what happened after that. ]])\r\n\r\n  MSG([[ During my appeal, I lost my momentum and ended up defeated without being able to show any good points. ]])\r\n\r\n  MSG([[ And out of sheer shame, the moment the appeal time ended, I ran off from the venue. ]])\r\n\r\n  MSG([[ Even though so many people supported me and I stood on that stage. ]])\r\n\r\n  MSG([[ I really feel pathetic. The back I've been chasing all this time is no longer even in sight. ]])\r\n\r\n  MSG([[ In the end, I couldn't become a strong person like Marika-neesan.]])\r\n\r\n\r\n  -- //.[オウガルート]承へ\r\n\r\n\r\n  -- 　　　◆\r\nFILTER_SCREEN(0)\r\n  LAYER_LOAD(LAYER_BG, \"\")\r\n  SWITCH_SCREEN(\"mask000\" , 1000,false)\r\nWAIT_INPUT(1000)\r\n\r\n  ScenarioManager.Next(\"EP_OGA_02\")\r\n\r\nend"
+}

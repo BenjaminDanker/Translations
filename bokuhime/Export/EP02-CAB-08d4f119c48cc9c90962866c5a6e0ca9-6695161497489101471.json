@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP02",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/EP02/EP02.lua",
+  "Text": "require(\"Scenario/EP02/EP02_01\")\r\nrequire(\"Scenario/EP02/EP02_02\")\r\nrequire(\"Scenario/EP02/EP02_03\")\r\nrequire(\"Scenario/EP02/EP02_04\")\r\nrequire(\"Scenario/EP02/EP02_05\")\r\nrequire(\"Scenario/EP02/EP02_06\")\r\nrequire(\"Scenario/EP02/EP02_07\")\r\nrequire(\"Scenario/EP02/EP02_08\")\r\nrequire(\"Scenario/EP02/EP02_09\")\r\nrequire(\"Scenario/EP02/EP02_10\")\r\nrequire(\"Scenario/EP02/EP02_11\")\r\nrequire(\"Scenario/EP02/EP02_12\")\r\nrequire(\"Scenario/EP02/EP02_13\")\r\nrequire(\"Scenario/EP02/EP02_14\")\r\nrequire(\"Scenario/EP02/EP02_15\")\r\nrequire(\"Scenario/EP02/EP02_16\")\r\nrequire(\"Scenario/EP02/EP02_17\")\r\nrequire(\"Scenario/EP02/EP02_18\")\r\nrequire(\"Scenario/EP02/EP02_19\")\r\nrequire(\"Scenario/EP02/EP02_20\")\r\nrequire(\"Scenario/EP02/EP02_21\")\r\nrequire(\"Scenario/EP02/EP02_22\")\r\nrequire(\"Scenario/EP02/EP02_23\")\r\nrequire(\"Scenario/EP02/EP02_24\")\r\nrequire(\"Scenario/EP02/EP02_25\")\r\nrequire(\"Scenario/EP02/EP02_26\")\r\nrequire(\"Scenario/EP02/EP02_27\")\r\nrequire(\"Scenario/EP02/EP02_28\")\r\nrequire(\"Scenario/EP02/EP02_29\")\r\nrequire(\"Scenario/EP02/EP02_30\")\r\nrequire(\"Scenario/EP02/EP02_31\")\r\nrequire(\"Scenario/EP02/EP02_32\")\r\nrequire(\"Scenario/EP02/EP02_33\")\r\nrequire(\"Scenario/EP02/EP02_34\")\r\n"
+}

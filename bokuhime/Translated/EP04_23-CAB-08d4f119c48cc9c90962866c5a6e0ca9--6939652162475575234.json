@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP04_23",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/EP04/RYU/EP04_23.lua",
+  "Text": "function RYU_EP04_23()\r\n    -- .エピローグ\r\n    SaveData.Title = \"エピローグ\"\r\n\r\n    -- //BG：大講堂正面\r\n    LAYER_LOAD(LAYER_BG, \"BG020ae\")\r\n    LAYER_POSITION(LAYER_BG,-500,200)\r\n    SWITCH_SCREEN(\"mask000\" , 1000,false)\r\n\r\nPLAY_BGM(\"BGM05.wav\")\r\n\r\n    -- //BU：ネメシア・嘲笑\r\n    LAYER_LOAD(50,\"BUL_MEN01qa\")\r\n    SWITCH_SCREEN(\"mask000\",500,false)\r\n\r\n    MSG([[ While the audience roared at the dramatic turnaround――Nemesia Himegami, who was watching the scene, sneered. ]])\r\n\r\nPLAY_VOICE(\"nemesia_0177.wav\")\r\n    MSG([[\r\n    【Nemesia】嘲笑\r\n \"It's like watching Marika Ikusa from a year ago. No matter how much they struggle, there's no way they can win against us.\" ]])\r\n\r\nPLAY_VOICE(\"nemesia_0178.wav\")\r\n    MSG([[\r\n    【Nemesia】嘲笑\r\n \"You think so too, don't you? Hey, Artemelia.\" ]])\r\n\r\n    -- //BU：ネメシア・嘲笑、アルメリア・邪悪笑み\r\n    LAYER_LOAD(LAYER_BG,\"BG020aa\")\r\n    LAYER_LOAD(50,\"BU_MEN01qa\")\r\n    LAYER_POSITION(50,400,0)\r\n    LAYER_LOAD(55,\"BU_ARU01na\")\r\n    LAYER_POSITION(55,-400,0)\r\n    SWITCH_SCREEN(\"mask000\",500,false)\r\n\r\nPLAY_VOICE(\"armeria_0046.wav\")\r\n    MSG([[\r\n    【Artemelia】邪悪笑み\r\n \"Exactly right. That figure thinking there's hope ahead is utterly ridiculous.\" ]])\r\n\r\n    LAYER_LOAD(50,\"BU_MEN01aa\")\r\n    LAYER_POSITION(50,400,0)\r\n    SWITCH_SCREEN(\"mask000\",300,true)\r\n\r\nPLAY_VOICE(\"nemesia_0179.wav\")\r\n    MSG([[\r\n    【Nemesia】通常\r\n \"You've no lingering feelings for that girl? It's completely fine to erase them, right?\" ]])\r\n\r\nPLAY_VOICE(\"armeria_0047.wav\")\r\n    MSG([[\r\n    【Artemelia】邪悪笑み\r\n \"Yes, I'm ready. Please erase everything—even the memories inside me—completely and cleanly.\" ]])\r\n\r\nPLAY_VOICE(\"armeria_0048.wav\")\r\n    MSG([[\r\n    【Artemelia】邪悪笑み\r\n \"...This is goodbye, Mina-chan. If you're going to hold a grudge, hold it against the you who forgot about me.\" ]])\r\n\r\nPLAY_VOICE(\"armeria_0049.wav\")\r\n    MSG([[\r\n    【Artemelia】邪悪笑み\r\n \"Hehe... heh, hehehehe...\" ]])\r\n\r\n    LAYER_LOAD(50,\"\")\r\n    LAYER_LOAD(55,\"\")\r\n\r\n    -- 　　　　◆\r\nSTOP_BGM(1000)\r\n    LAYER_LOAD(LAYER_BG, \"BG000aa\")\r\n    SWITCH_SCREEN(\"mask000\", 2000,false)\r\n    WAIT_INPUT(1000)\r\n\r\n    ScenarioManager.Next(\"RYU_EP05_01\")\r\nend\r\n\r\n"
+}

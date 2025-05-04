@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP04_23",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/EP04/RIR/EP04_23.lua",
+  "Text": "function RIR_EP04_23()\r\n    -- .エピローグ\r\n    SaveData.Title = \"エピローグ\"\r\n\r\n    -- //BG：繁華街（夜）\r\n    LAYER_LOAD(LAYER_BG, \"BG004ca\")\r\n    SWITCH_SCREEN(\"mask000\" , 1000,false)\r\n\r\n    MSG([[ At the very same time Minato and Lira were united―― ]])\r\n\r\n    -- //BU：素顔３号先輩\r\n    LAYER_LOAD(50,\"BU_SM301ab\")\r\n    SWITCH_SCREEN(\"mask000\",500,true)\r\n\r\nPLAY_VOICE(\"senpai3_0086.wav\")\r\n    MSG([[\r\n    【???】Bare Face #3\r\n \"Just as ordered, I've found Lira Hoozuki.\" ]])\r\n\r\nPLAY_VOICE(\"senpai3_0087.wav\")\r\n    MSG([[\r\n    【???】Bare Face #3\r\n \"And luckily, I found some material perfect for your usual intimidation. I wanna have them reconsider how they treat us a bit.\" ]])\r\n\r\nPLAY_VOICE(\"nemesia_0086.wav\")\r\n    MSG([[\r\n    【Nemesia】\r\n \"Oh my~<sprite=\"Emoji\" name=\"star\"> What a wonderful job you did~ Aside from that useless Daria, giving orders was definitely the right call~\" ]])\r\n\r\nPLAY_VOICE(\"nemesia_0087.wav\")\r\n    MSG([[\r\n    【Nemesia】\r\n \"I'll consider improving your treatment too, so be sure to ask your family for cooperation.\" ]])\r\n\r\nPLAY_VOICE(\"nemesia_0088.wav\")\r\n    MSG([[\r\n    【Nemesia】\r\n \"We’ll focus our target solely on Lira Hoozuki. That ungrateful one must regret it thoroughly.\" ]])\r\n\r\nPLAY_VOICE(\"senpai3_0088.wav\")\r\n    MSG([[\r\n    【???】Bare Face #3\r\n \"Hey hey, you planning to drag in the Houou Group too? You're really obsessed with this academy, huh.\" ]])\r\n\r\nPLAY_VOICE(\"nemesia_0089.wav\")\r\n    MSG([[\r\n    【Nemesia】\r\n \"...Silence. Anyone who interferes with my plan, I won’t spare even a single bitch.\" ]])\r\n\r\nPLAY_VOICE(\"nemesia_0090.wav\")\r\n    MSG([[\r\n    【Nemesia】\r\n \"The era where such a ‘fake’ gets praised will end. By the hand of Nemesia Himegami, certainly.\" ]])\r\n\r\n    LAYER_LOAD(50,\"\")\r\n    -- 　　　　◆\r\n\r\n    LAYER_LOAD(LAYER_BG, \"BG000aa\")\r\n    SWITCH_SCREEN(\"mask000\", 1000,false)\r\n    WAIT_INPUT(1000)\r\n\r\n    ScenarioManager.Next(\"RIR_EP05_01\")\r\nend\r\n"
+}

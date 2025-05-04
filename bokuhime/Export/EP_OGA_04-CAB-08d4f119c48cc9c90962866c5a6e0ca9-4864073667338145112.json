@@ -1,0 +1,14 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1707786903170945384
+  },
+  "m_Name": "EP_OGA_04",
+  "Path": "Assets/AddressableAssets/Lua/Scenario/Other/EP_OGA_04.lua",
+  "Text": "function EP_OGA_04()\r\n  -- .[オウガルート]結『伊草ミナトと六条オウガ』\r\n  SaveData.Title = \"伊草ミナトと六条オウガ\"\r\n\r\n  -- //BG：黒バック\r\n  LAYER_LOAD(LAYER_BG, \"BG000aa\")\r\n  SWITCH_SCREEN(\"mask000\" , 1000,false)\r\n\r\n  -- //CI：オウガEND\r\nLAYER_LOAD(50,\"CI058a\")\r\nSWITCH_SCREEN(\"mask000\",1000,false)\r\n\r\nPLAY_BGM(\"BGM07.wav\",0,true)\r\n\r\n  MSG([[\r\n  　その後、オウガくんにすべてを明かしたボクは、オウガくん、ひいては六条家の協力の元、改めてマリカ姉さんに関する真相を探り始めた。\r\n  ]])\r\n\r\n  MSG([[\r\n  　百合愛学園は去ることになったけれど、まだあきらめない。\r\n  ]])\r\n\r\n  MSG([[\r\n  　マリカ姉さんを救えるように、最後の最後まで、あがき続けるつもりだ。\r\n  ]])\r\n\r\n  MSG([[\r\n  　だって今のボクの隣には、何でも打ち明けられる親友がいてくれるのだから。　\r\n  ]])\r\n\r\n  MSG([[\r\n  　ただひとつだけ、オウガくんにも話せない秘密がある。\r\n  ]])\r\n\r\nPLAY_VOICE(\"ouga_plus0015.wav\")\r\n  MSG([[\r\n  【オウガ】\r\n  「ところでミナト、エリカ女史は元気にしているのか？　たまには会って、互いの近況を伝え合いたいものだが」\r\n  ]])\r\n\r\nPLAY_VOICE(\"minato_plus0039.wav\")\r\n  MSG([[\r\n  【ミナト】\r\n  「え、エリカ？　そ、そそ、そうだねえ……！　元気にはしているよ！　オウガくんと会える日があれば、また連絡させるね！」\r\n  ]])\r\n\r\n  MSG([[\r\n  　それは、伊草エリカの正体がボクであった、ということだ。\r\n  ]])\r\n\r\n  MSG([[\r\n  　「真の大和撫子」と呼んだ存在が実は親友だってわかったら、彼はどんな顔をするだろう。\r\n  ]])\r\n\r\nPLAY_VOICE(\"minato_plus0040.wav\")\r\n  MSG([[\r\n  【ミナト】\r\n  （百合愛学園を去っても……『伊草エリカ』から逃げられない、みたいだね）\r\n  ]])\r\n\r\n  MSG([[\r\n  　自分の皮肉な境遇を自嘲しながら――\r\n  ]])\r\n\r\n  MSG([[\r\n  　ボクは今日も変わらず、オウガくんの隣で笑っているのであった。\r\n  ]])\r\n\r\n  -- //Fin\r\n\r\n  -- 25\tオウガＥＮＤ\t『オウガ』ルートをクリアした\r\n  UNLOCK_TROPHY(25)\r\n\r\nSTOP_BGM(2000)\r\n  LAYER_LOAD(50,\"\")\r\n  LAYER_LOAD(LAYER_BG, \"\")\r\n  SWITCH_SCREEN(\"mask000\" , 2000,false)\r\nWAIT_INPUT(1000)\r\n\r\n  NazenanoBokuhime(SaveData.BadNextScenario , SaveData.OgaNextScenario)\r\n  SaveData.OgaNextScenario = \"\"\r\nend"
+}
