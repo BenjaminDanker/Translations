@@ -58,23 +58,38 @@ def combine_msgs(orig_text, trans_text):
         en_line_count = len(en_wrapped)
 
         # Process Japanese: split into nonblank lines.
-        jp_lines = [line for line in o_content.splitlines() if line.strip()]
+        raw_jp_lines = [line for line in o_content.splitlines() if line.strip()]
+        jp_lines = []
+        if raw_jp_lines:
+            # Check if the first non-blank line (stripped) starts with 【...】
+            first_line_stripped_content = raw_jp_lines[0].strip()
+            if re.match(r'^【.*?】', first_line_stripped_content):
+                # If it does, exclude this line
+                jp_lines = raw_jp_lines[1:]
+            else:
+                jp_lines = raw_jp_lines
+        # If raw_jp_lines was empty, jp_lines remains empty.
+        
         jp_line_count = len(jp_lines)
 
         # If the total measured lines exceed 4 and Japanese has more than one line,
-        # collapse all Japanese lines into one.
-        if (en_line_count + jp_line_count > 4) and (jp_line_count > 1):
+        # or if jp_lines is empty, collapse Japanese lines or set to empty.
+        if not jp_lines:
+            jp_block = ""
+        elif (en_line_count + jp_line_count > 4) and (jp_line_count > 1):
             jp_block = indent + " ".join(line.strip() for line in jp_lines)
         else:
-            jp_block = "\r\n".join(indent + line for line in jp_lines)
+            # Lines in jp_lines are from o_content.splitlines() (o_content was stripped),
+            # so they already have their correct relative indentation.
+            jp_block = "\r\n".join(jp_lines)
 
         # Do not insert newlines in the English translation output.
         en_block = indent + english_line
 
         # Adjust English: wrap the first 【...】 with \r\n around it.
         en_block = re.sub(r'^( *)(【.*?】)', r'\1\r\n\2\r\n', en_block, count=1)
-        # Adjust Japanese: remove the first 【...】 if present.
-        jp_block = re.sub(r'^( *)【.*?】', r'\1', jp_block, count=1)
+        # Adjust Japanese: The removal of 【...】 lines is now handled above by filtering jp_lines.
+        # jp_block = re.sub(r'^( *)【.*?】', r'\1', jp_block, count=1) # This line is removed.
 
         # Combine the two parts with exactly one newline between.
         if en_block and jp_block:
